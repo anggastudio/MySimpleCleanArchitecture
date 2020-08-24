@@ -18,7 +18,7 @@ object Injection {
         return MessageRepository(messageDataSource)
     }
 
-    private fun provideDataSource(): IMessageDataSource {
+    private fun provideDataSource(): MessageDataSource {
         return MessageDataSource()
     }
 }
