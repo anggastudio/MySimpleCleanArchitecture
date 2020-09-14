@@ -13,7 +13,7 @@ class MainViewModelFactory (
     companion object {
         @Volatile
         private var instance: MainViewModelFactory? = null
-        fun getInstance(): MainViewModelFactory? =
+        fun getInstance(): MainViewModelFactory =
             instance ?: synchronized(this) {
                 instance ?: MainViewModelFactory((Injection.provideUseCase()))
             }

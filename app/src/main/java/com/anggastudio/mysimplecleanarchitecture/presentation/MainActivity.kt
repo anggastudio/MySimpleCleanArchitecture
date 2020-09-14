@@ -1,11 +1,9 @@
-package com.anggastudio.mysimplecleanarchitecture
+package com.anggastudio.mysimplecleanarchitecture.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.anggastudio.mysimplecleanarchitecture.presentation.MainViewModel
-import com.anggastudio.mysimplecleanarchitecture.presentation.MainViewModelFactory
+import com.anggastudio.mysimplecleanarchitecture.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun obtainViewModel(): MainViewModel {
-        val factory = MainViewModelFactory.getInstance() as ViewModelProvider.Factory
+        val factory = MainViewModelFactory.getInstance()
         return ViewModelProvider(this, factory)[MainViewModel::class.java]
     }
 }
